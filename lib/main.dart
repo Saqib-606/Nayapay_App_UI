@@ -29,7 +29,7 @@ class _HomeScreenState extends State <HomeScreen> {
       backgroundColor: const Color.fromRGBO(245, 245, 245, 1),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          padding: const EdgeInsets.only(top: 10),
           child: Column(
             children: [
               
@@ -37,18 +37,21 @@ class _HomeScreenState extends State <HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // Profile Logo
-                  CircleAvatar(
-                    backgroundColor: Colors.deepPurple,
-                    child: Text(
-                      "NS",
-                      style: TextStyle(
-                        color: Colors.white
-                      ),
-                    )
+                  Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.deepPurple,
+                      child: Text(
+                        "NS",
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      )
+                    ),
                   ),
-
-                  SizedBox(width: 10,),
-
+          
+                  SizedBox(width: 5,),
+          
                   // Search Bar
                   Expanded(
                     child: SizedBox(
@@ -72,52 +75,58 @@ class _HomeScreenState extends State <HomeScreen> {
                       ),
                     ),
                   ),
-
+          
                   SizedBox(width: 5,),
-
+          
                   // Qr Code Icon
                   CircleAvatar(
                     backgroundColor: Colors.white,
                     child: Icon(Icons.qr_code_scanner_rounded, color: Colors.black,),
                   ),
-
+          
                   SizedBox(width: 5,),
-
+          
                   // Notifications Icon
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: Icon(Icons.notifications, color: Colors.black,),
+                  Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.notifications, color: Colors.black,),
+                    ),
                   )
                 ],
               ),
-
+          
               SizedBox(height: 50,),
-
+          
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text (
-                    "Hi"
+                    "Hi",
+                    style: TextStyle(
+                      fontSize: 16
+                    ),
                   ),
-
+          
                   SizedBox(width: 5,),
-
+          
                   Text (
                     "Najam",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold
                     ),
                   ),
-
+          
                   SizedBox(width: 5,),
-
+          
                   Icon(Icons.celebration_sharp)
                 ],
               ),
-
+          
               SizedBox(height: 15,),
-
+          
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -128,61 +137,64 @@ class _HomeScreenState extends State <HomeScreen> {
                       fontWeight: FontWeight.bold
                     ),
                   ),
-
+          
                   SizedBox(width: 5,),
-
+          
                   Icon(Icons.hide_image)
                 ],
               ),
-
+          
               SizedBox(height: 5,),
-
+          
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.refresh),
-
+                  Icon(Icons.refresh, color: Colors.grey,),
+          
                   SizedBox(width: 3,),
-
+          
                   Text(
-                    "Updated moments ago"
+                    "Updated moments ago",
+                    style: TextStyle(
+                      color: Colors.grey
+                    ),
                   )
                 ],
               ),
-
+          
               SizedBox(height: 30,),
-
+          
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children: [
                       Icon(Icons.add),
-
+          
                       SizedBox(height: 5,),
-
+          
                       Text(
                         "Add Money"
                       )
                     ],
                   ),
-
+          
                   Column(
                     children: [
                       Icon(Icons.arrow_forward),
                       
                       SizedBox(height: 5,),
-
+          
                       Text(
                         "Send Money"
                       )
                     ],
                   ),
-
+          
                   Column(
                     children: [
                       Icon(Icons.more_horiz),
-
+          
                       SizedBox(height: 5,),
                       
                       Text(
@@ -192,12 +204,233 @@ class _HomeScreenState extends State <HomeScreen> {
                   )
                 ],
               ),
-
+          
               SizedBox(height: 20,),
+
+              // Outer Container
+              Expanded(
+                child: Container(
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(35), topRight: Radius.circular(35)),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          // Inner Container
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                              child: Container(
+                                height: 150,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: const Color.fromARGB(255, 228, 65, 0),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 40, left: 30),
+                                          child: Text(
+                                            "You're here!",
+                                            style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 2, left: 30),
+                                          child: Text(
+                                            "Let's make money things happen.",
+                                            style: TextStyle(
+                                              color: Colors.white
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 2, left: 30),
+                                          child: Text(
+                                            "You know you want to.",
+                                            style: TextStyle(
+                                              color: Colors.white
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.qr_code, color: Colors.red,),
+
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "QuickPay"
+                                  )
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.blinds_closed, color: Colors.red,),
+
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "Bills"
+                                  )
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.house, color: Colors.red),
+                                  
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "merchants"
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.mobile_friendly_outlined, color: Colors.red),
+                                  
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "Mobile Top-Up"
+                                  )
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.blinds_closed_sharp, color: Colors.red),
+                                  
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "Bill Split"
+                                  )
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              height: 120,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.card_giftcard, color: Colors.red),
+                                  
+                                  SizedBox(height: 8,),
+
+                                  Text(
+                                    "Gift Envelope"
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
-      ) 
+      ),
     );
   }
 }

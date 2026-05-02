@@ -97,7 +97,7 @@ class _HomeScreenState extends State <HomeScreen> {
                 ],
               ),
           
-              SizedBox(height: 50,),
+              SizedBox(height: 13,),
           
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -105,7 +105,7 @@ class _HomeScreenState extends State <HomeScreen> {
                   Text (
                     "Hi",
                     style: TextStyle(
-                      fontSize: 16
+                      fontSize: 20
                     ),
                   ),
           
@@ -114,14 +114,14 @@ class _HomeScreenState extends State <HomeScreen> {
                   Text (
                     "Najam",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold
                     ),
                   ),
           
                   SizedBox(width: 5,),
           
-                  Icon(Icons.celebration_sharp)
+                  Image.asset("assets/images/Waving-Hand.png", height: 25,)
                 ],
               ),
           
@@ -140,7 +140,7 @@ class _HomeScreenState extends State <HomeScreen> {
           
                   SizedBox(width: 5,),
           
-                  Icon(Icons.hide_image)
+                  Icon(Icons.visibility_off, color: Colors.grey,)
                 ],
               ),
           
@@ -213,6 +213,7 @@ class _HomeScreenState extends State <HomeScreen> {
                   height: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(35), topRight: Radius.circular(35)),
+                    color: Colors.white
                   ),
                   child: Column(
                     children: [
@@ -221,7 +222,7 @@ class _HomeScreenState extends State <HomeScreen> {
                           // Inner Container
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                               child: Container(
                                 height: 150,
                                 width: double.infinity,
@@ -283,7 +284,7 @@ class _HomeScreenState extends State <HomeScreen> {
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -292,7 +293,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -313,7 +314,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -334,7 +335,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -363,7 +364,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -384,7 +385,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -405,7 +406,7 @@ class _HomeScreenState extends State <HomeScreen> {
                               width: 110,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.white
+                                color: Colors.grey.shade100
                               ),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -430,6 +431,25 @@ class _HomeScreenState extends State <HomeScreen> {
             ],
           ),
         ),
+      ),
+
+      bottomNavigationBar: SafeArea(
+        child: SizedBox(
+          height: 62,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset("assets/images/NayaPay-Logo.png", height: 30,),
+
+              Icon(Icons.chat_bubble, color: Colors.grey, size: 30,),
+
+              Icon(Icons.credit_card, color: Colors.grey, size: 30,),
+
+              Icon(Icons.compare_arrows, color: Colors.grey, size: 30,)
+            ],
+          ),
+        )
       ),
     );
   }

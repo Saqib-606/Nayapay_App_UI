@@ -33,10 +33,10 @@ class _HomeScreenState extends State <HomeScreen> {
           child: Column(
             children: [
               
+              // TOP BAR
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Profile Logo
                   Padding(
                     padding: const EdgeInsets.all(5),
                     child: CircleAvatar(
@@ -52,25 +52,26 @@ class _HomeScreenState extends State <HomeScreen> {
           
                   SizedBox(width: 5,),
           
-                  // Search Bar
                   Expanded(
                     child: SizedBox(
                       height: 40,
                       child: TextField(
                         controller: searchBar,
                         decoration: InputDecoration(
+                          fillColor: Colors.white,
+                          filled: true,
                           contentPadding: EdgeInsets.all(0),
                           prefixIcon: Icon(Icons.search),
                           hintText: "Find people and merchants",
                           hintStyle: TextStyle(fontSize: 12),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
                             borderSide: BorderSide(color: Colors.white)
                           ),
-                          // enabledBorder: OutlineInputBorder()
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(color: Colors.white)
+                          ),
                         ),
                       ),
                     ),
@@ -78,7 +79,6 @@ class _HomeScreenState extends State <HomeScreen> {
           
                   SizedBox(width: 5,),
           
-                  // Qr Code Icon
                   CircleAvatar(
                     backgroundColor: Colors.white,
                     child: Icon(Icons.qr_code_scanner_rounded, color: Colors.black,),
@@ -86,7 +86,6 @@ class _HomeScreenState extends State <HomeScreen> {
           
                   SizedBox(width: 5,),
           
-                  // Notifications Icon
                   Padding(
                     padding: const EdgeInsets.all(5),
                     child: CircleAvatar(
@@ -98,7 +97,8 @@ class _HomeScreenState extends State <HomeScreen> {
               ),
           
               SizedBox(height: 13,),
-          
+
+              // GREETING
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -126,7 +126,8 @@ class _HomeScreenState extends State <HomeScreen> {
               ),
           
               SizedBox(height: 15,),
-          
+
+              // BALANCE
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -163,7 +164,8 @@ class _HomeScreenState extends State <HomeScreen> {
               ),
           
               SizedBox(height: 30,),
-          
+
+              // ACTIONS  
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -207,7 +209,7 @@ class _HomeScreenState extends State <HomeScreen> {
           
               SizedBox(height: 20,),
 
-              // Outer Container
+              // MAIN CONTAINER
               Expanded(
                 child: Container(
                   height: double.infinity,
@@ -219,7 +221,7 @@ class _HomeScreenState extends State <HomeScreen> {
                     children: [
                       Row(
                         children: [
-                          // Inner Container
+                          // CARD
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
@@ -283,6 +285,7 @@ class _HomeScreenState extends State <HomeScreen> {
                         ],
                       ),
 
+                      // ROW 1
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
@@ -354,6 +357,7 @@ class _HomeScreenState extends State <HomeScreen> {
                         ),
                       ),
 
+                      // ROW 2
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                         child: Row(
@@ -433,6 +437,7 @@ class _HomeScreenState extends State <HomeScreen> {
         ),
       ),
 
+      // BOTTOM NAV
       bottomNavigationBar: SafeArea(
         child: SizedBox(
           height: 62,
@@ -441,11 +446,11 @@ class _HomeScreenState extends State <HomeScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset("assets/images/NayaPay-Logo.png", height: 30,),
-
+      
               Icon(Icons.chat_bubble, color: Colors.grey, size: 30,),
-
+      
               Icon(Icons.credit_card, color: Colors.grey, size: 30,),
-
+      
               Icon(Icons.compare_arrows, color: Colors.grey, size: 30,)
             ],
           ),

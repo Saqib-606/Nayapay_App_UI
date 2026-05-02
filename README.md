@@ -34,6 +34,13 @@ assets/
 
 ---
 
+## ⚙️ Getting Started
+
+Prerequisites
+- Flutter SDK installed
+- Android Studio / VS Code
+- Emulator or physical device
+
 ## 🎯 Purpose
 
 This project is built for learning and practice purposes, focusing on:
@@ -45,9 +52,19 @@ This project is built for learning and practice purposes, focusing on:
 
 ---
 
+## 📌 Future Improvements
+
+- Add navigation between screens
+- Implement real backend integration
+- Add state management (Provider / Riverpod / Bloc)
+- Dark mode support
+- Animations and transitions
+
+---
+
 ## 👨‍💻 Author
 
-- Saqi
+- Saqib
 - Flutter Developer & Learner
 
 ---
